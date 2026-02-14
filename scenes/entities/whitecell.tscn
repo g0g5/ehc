@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b8hadpvi3v7q1"]
+
+[ext_resource type="Script" uid="uid://dq0k3oxiona7v" path="res://scripts/enemies/white_cell.gd" id="1_yan20"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yan20"]
+radius = 10.049875
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xt2eg"]
+radius = 43.737854
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yan20"]
+
+[node name="whitecell" type="CharacterBody2D" unique_id=289953235]
+position = Vector2(1, 1)
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_yan20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=31791525]
+shape = SubResource("CircleShape2D_yan20")
+
+[node name="fire_cooldown" type="Timer" parent="." unique_id=923130561]
+wait_time = 5.0
+autostart = true
+
+[node name="hitbox" type="Area2D" parent="." unique_id=714809486]
+collision_layer = 8
+collision_mask = 22
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=970855473]
+shape = SubResource("CircleShape2D_xt2eg")
+
+[node name="Sprite2D" type="Sprite2D" parent="hitbox" unique_id=1272106452]
+scale = Vector2(94, 90)
+texture = SubResource("PlaceholderTexture2D_yan20")
+
+[connection signal="timeout" from="fire_cooldown" to="." method="_on_fire_cooldown_timeout"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

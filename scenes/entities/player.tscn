@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bw14ewj8v8knl"]
+
+[ext_resource type="Script" uid="uid://b8laxwgmmvkwn" path="res://scripts/player/player_controller.gd" id="1_kulkj"]
+[ext_resource type="Texture2D" uid="uid://ctwahfoe2p62t" path="res://icon.svg" id="2_wi2gb"]
+[ext_resource type="Script" uid="uid://bl6m8c2ougmwm" path="res://scripts/player/player_state.gd" id="3_wi2gb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kulkj"]
+size = Vector2(122, 126.5)
+
+[node name="Player" type="CharacterBody2D" unique_id=1545337902 groups=["Player"]]
+collision_layer = 4
+collision_mask = 26
+script = ExtResource("1_kulkj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1958590369]
+texture = ExtResource("2_wi2gb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2115822083]
+shape = SubResource("RectangleShape2D_kulkj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1759980904]
+zoom = Vector2(0.4, 0.4)
+
+[node name="state" type="Node" parent="." unique_id=1002171587]
+script = ExtResource("3_wi2gb")
+
+[connection signal="gameover" from="state" to="." method="_on_state_gameover"]

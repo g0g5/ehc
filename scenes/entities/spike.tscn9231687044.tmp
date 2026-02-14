@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://chvucy2ove1rx"]
+
+[ext_resource type="Script" uid="uid://dy8ubxftr08f3" path="res://sences/entities/spike.gd" id="1_yxifu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mg23"]
+size = Vector2(13, 8)
+
+[node name="spike" type="Area2D" unique_id=836942189]
+collision_layer = 8
+collision_mask = 20
+script = ExtResource("1_yxifu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627738686]
+position = Vector2(7, 4)
+shape = SubResource("RectangleShape2D_7mg23")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1287850574]
+position = Vector2(0, -2.4999995)
+scale = Vector2(3.4999995, 3.4999995)
+polygon = PackedVector2Array(1, 1, 0, 3, 2, 3, 4, 3, 3, 1, 2, 3)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

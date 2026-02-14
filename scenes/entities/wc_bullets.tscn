@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://camsdrlrgau3"]
+
+[ext_resource type="Script" uid="uid://bdr6gtp66xqe7" path="res://scripts/enemies/enemy_bullet.gd" id="1_s8hfu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x4m5m"]
+radius = 19.104973
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_88thg"]
+
+[node name="wc_bullets" type="CharacterBody2D" unique_id=1895599367]
+script = ExtResource("1_s8hfu")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1946884606]
+collision_layer = 16
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1290078391]
+shape = SubResource("CircleShape2D_x4m5m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hitbox" unique_id=845657025]
+scale = Vector2(28, 28)
+texture = SubResource("PlaceholderTexture2D_88thg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1763878861]
+shape = SubResource("CircleShape2D_x4m5m")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

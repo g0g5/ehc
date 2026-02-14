@@ -1,0 +1,14 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Build artifacts
+build/
+
+# Android export
+/android/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+nul

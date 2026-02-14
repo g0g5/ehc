@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://chuib5ot07wqn"]
+
+[ext_resource type="Script" uid="uid://bg3or5rbfu2od" path="res://scripts/ui/title_screen.gd" id="1_4ignj"]
+[ext_resource type="Texture2D" uid="uid://bl5vxt22qif2w" path="res://graphics/1768801099193.png" id="2_wosw1"]
+
+[node name="Title" type="Control" unique_id=1963899110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ignj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1540490496]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 46.0
+offset_right = 1061.2917
+offset_bottom = 230.0
+texture = ExtResource("2_wosw1")
+expand_mode = 1
+
+[node name="level1" type="VBoxContainer" parent="." unique_id=1844922945]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 248.0
+offset_right = 1020.0
+offset_bottom = 586.0
+
+[node name="start" type="Button" parent="level1" unique_id=1007890617]
+layout_mode = 2
+text = "START GAME"
+script = ExtResource("1_4ignj")
+
+[node name="quit" type="Button" parent="level1" unique_id=1580666873]
+layout_mode = 2
+text = "QUIT GAME"
+
+[connection signal="pressed" from="level1/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="level1/quit" to="." method="_on_quit_pressed"]

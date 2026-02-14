@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bpncl15vdbkm2"]
+
+[ext_resource type="Script" uid="uid://dmsnyvqn8ibpq" path="res://scripts/ui/game_clear.gd" id="1_170vx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gdra"]
+size = Vector2(304, 276)
+
+[node name="gameclear" type="Area2D" unique_id=1489326790]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_170vx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850941058]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_8gdra")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
