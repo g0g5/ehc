@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bg3or5rbfu2od" path="res://scripts/ui/title_screen.gd" id="1_4ignj"]
 [ext_resource type="Texture2D" uid="uid://bl5vxt22qif2w" path="res://graphics/1768801099193.png" id="2_wosw1"]
+[ext_resource type="Texture2D" uid="uid://bortyjeqn6br3" path="res://graphics/ui_placeholders/图片1.png" id="3_p6dhs"]
 
 [node name="Title" type="Control" unique_id=1963899110]
 layout_mode = 3
@@ -36,6 +37,36 @@ script = ExtResource("1_4ignj")
 [node name="quit" type="Button" parent="level1" unique_id=1580666873]
 layout_mode = 2
 text = "QUIT GAME"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1517721797]
+layout_mode = 0
+offset_right = 1149.5033
+offset_bottom = 647.0
+texture = ExtResource("3_p6dhs")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1134397362]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 224.0
+offset_right = 1054.0
+offset_bottom = 487.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Buttons" unique_id=1566065278]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="GalleryButton" type="Button" parent="Buttons" unique_id=802203353]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="Buttons" unique_id=309286914]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="Buttons" unique_id=354213818]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 
 [connection signal="pressed" from="level1/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="level1/quit" to="." method="_on_quit_pressed"]
