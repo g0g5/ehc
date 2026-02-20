@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://d14ecaamnle3x"]
+
+[ext_resource type="Texture2D" uid="uid://bshwmubb5bjb4" path="res://docs/ui/gallery_selection_menu.png" id="1_yeo14"]
+
+[node name="ExtraMenu" type="Control" unique_id=1667435589]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=68397746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yeo14")
+expand_mode = 2
+
+[node name="BackButton" type="Button" parent="." unique_id=892684723]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.072
+anchor_right = 0.079
+anchor_bottom = 0.163
+text = "返回"
+
+[node name="GalleryPanel" type="Control" parent="." unique_id=544272443]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.039
+anchor_right = 0.52900004
+anchor_bottom = 0.694
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="GalleryPanel" unique_id=1498381301]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.025
+anchor_right = 0.97800004
+anchor_bottom = 0.712
+
+[node name="FlappyDiskImage" type="TextureRect" parent="GalleryPanel" unique_id=907865822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="GalleryPanel" unique_id=471902787]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.76100004
+anchor_right = 0.62
+anchor_bottom = 0.95100003
+grow_horizontal = 2
+text = "GALLERY
+"
+
+[node name="LibraryPanel" type="Control" parent="." unique_id=1452009341]
+layout_mode = 1
+anchor_left = 0.55
+anchor_top = 0.039
+anchor_right = 0.97900003
+anchor_bottom = 0.694
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="LibraryPanel" unique_id=1867540759]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.025
+anchor_right = 0.97800004
+anchor_bottom = 0.712
+
+[node name="FlappyDiskImage" type="TextureRect" parent="LibraryPanel" unique_id=469783749]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="LibraryPanel" unique_id=135743069]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.76100004
+anchor_right = 0.62
+anchor_bottom = 0.95100003
+grow_horizontal = 2
+text = "LIBRARY
+"
+
+[node name="HintPanel" type="Control" parent="." unique_id=1796586703]
+layout_mode = 1
+anchor_left = 0.132
+anchor_top = 0.73200005
+anchor_right = 0.95500004
+anchor_bottom = 0.95800006
+
+[node name="HintLabel" type="Label" parent="HintPanel" unique_id=1525006897]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2

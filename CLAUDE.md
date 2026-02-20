@@ -36,41 +36,22 @@ The project uses seven autoload singletons configured in `project.godot`:
 
 ```
 scripts/
-├── autoload/          # Global singleton scripts
-│   ├── game_manager.gd
-│   ├── player_manager.gd
-│   ├── level_manager.gd
-│   ├── save_manager.gd
-│   └── ui_manager.gd
-├── player/            # Player-related scripts
-│   ├── player_controller.gd   # Main player CharacterBody2D
-│   ├── player_state.gd        # Player state node (health, stamina, status)
-│   ├── player_animation.gd    # Animation handling
-│   ├── player_effects.gd      # Visual effects
-│   └── player_input.gd        # Input handling
-├── enemies/           # Enemy scripts
-│   ├── base_enemy.gd
-│   ├── white_cell.gd
-│   └── enemy_bullet.gd
-├── hazards/           # Hazard/trap scripts
-│   ├── base_hazard.gd
-│   ├── spike.gd
-│   └── sticky_pool.gd
-├── ui/                # UI panel scripts
-│   ├── title_screen.gd
-│   ├── hud.gd
-│   ├── pause_menu.gd
-│   ├── settings_menu.gd
-│   └── game_clear.gd
-├── utils/             # Utilities and constants
-│   ├── constants.gd   # GameConstants class
-│   └── signal_bus.gd  # Global signal bus
-├── scene/             # Scene management
-│   ├── scene_manager.gd
-│   └── levels/
-│       └── level_01_manager.gd
+├── autoload/          # Global singleton managers (GameManager, PlayerManager, etc.)
+├── player/            # Player mechanics module (controller, state, animation, input)
+├── enemies/           # Enemy behaviors and AI module
+├── hazards/           # Environmental hazards and traps module
+├── ui/                # User interface panels and screens module
+├── utils/             # Shared utilities and game constants
+├── scene/             # Scene lifecycle and level-specific managers
 ├── global.gd          # Legacy global settings
 └── Playerstates.gd    # Legacy player state singleton
+
+scenes/
+├── entities/          # Game entity scenes (player, enemies, hazards, projectiles)
+├── Levels/            # Level scenes and tilemaps
+├── UI/                # UI scenes (scaffold state)
+├── title.tscn         # Main entry point (run/main_scene)
+└── gameclear.tscn     # Game completion screen
 ```
 
 ### Scene Structure
@@ -98,69 +79,55 @@ Configured in `project.godot`:
 
 ### Core Systems
 
-**GameManager** (`scripts/autoload/game_manager.gd`):
+**GameManager** (autoload module):
 - Game state machine: `TITLE`, `PLAYING`, `PAUSED`, `GAME_OVER`, `VICTORY`
 - Level loading via `load_level(level_id)` / `reload_current_level()`
 - Scene path registry: `register_level(level_id, scene_path)`
 - Signals: `state_changed`, `level_loaded`, `level_restarted`
 
-**PlayerManager** (`scripts/autoload/player_manager.gd`):
+**PlayerManager** (autoload module):
 - Player instance registration: `register_player(player)` / `unregister_player()`
 - Unified damage interface: `apply_damage(damage_data)` with `cloth_damage`, `stamina_damage`, `knockback_force`, `knockback_direction`
 - Status effect application: `apply_status(status_type)` ("sticky", "weak")
 - Player respawn: `respawn_player()` at `spawn_point`
 - Signals: `player_spawned`, `player_died`
 
-**Player Controller** (`scripts/player/player_controller.gd`):
-- Physics-based CharacterBody2D movement
-- BOOST system (horizontal/vertical air dash when jump pressed in air)
-- Variable jump height (jump canceling when releasing jump key)
-- Knockback via `apply_knockback(force, direction)`
-- Reads state from `$state` node (PlayerState class)
-- Registers with PlayerManager on `_ready()`
+**Player Module** (`scripts/player/`):
+- **Controller**: Physics-based CharacterBody2D movement, BOOST system (air dash), variable jump height
+- **State**: Health/cloth layers, stamina, status effects (weak, sticky), damage handling
+- **Animation**: Sprite animation state machine and transitions
+- **Input**: Input buffering and action handling
 
-**Player State** (`scripts/player/player_state.gd`):
-- Health system: "cloth layers" (`current_cloth` / `max_cloth`)
-- Stamina system (`current_stamina` / `max_stamina`)
-- Status effects:
-  - `is_weak`: Reduces knockback effectiveness (3 second recovery)
-  - `is_sticky`: Reduces friction to 20% (5 second recovery)
-- Damage handling: `take_damage(cloth, stamina, knockback) -> final_knockback`
-- Signals: `cloth_broked`, `stamina_changed`, `became_weak`, `became_sticky`, `gameover`
-
-**LevelManager** (`scripts/autoload/level_manager.gd`):
+**LevelManager** (autoload module):
 - Enemy tracking: `register_enemy(enemy)` / `unregister_enemy(enemy)`
 - Checkpoint system: `set_checkpoint(pos)` / `get_checkpoint()`
 - Collectible tracking
 - Level completion: `complete_level()` emits `level_completed`
 
-**SaveManager** (`scripts/autoload/save_manager.gd`):
+**SaveManager** (autoload module):
 - Save file: `user://save.json`
 - Methods: `save_game()`, `load_game()`, `delete_save()`, `has_save()`
 - Tracks: last level, checkpoint position, player state (cloth, stamina, status effects)
 - Save version: 1 (with migration check)
 
-**UIManager** (`scripts/autoload/ui_manager.gd`):
+**UIManager** (autoload module):
 - Panel management: `open_panel(name, params)`, `close_panel(name)`
 - UI navigation stack: `push_ui_state()`, `pop_ui_state()`
 - HUD updates: `update_hud(data_type, value)` emits `hud_updated`
 - Message dialogs: `show_message()`, `show_confirm()`
 - Auto-connects to PlayerManager state signals
 
-**GameConstants** (`scripts/utils/constants.gd`):
-- Static utility class with game-wide constants
-- `GRAVITY_VECTOR`: Vector2(0, 3000)
-- Player defaults: `PLAYER_MAX_CLOTH`, `PLAYER_MAX_STAMINA`
-- Status durations: `WEAK_DURATION` (3s), `STICKY_DURATION` (5s)
-- Level scene path mappings
+**Utils Module** (`scripts/utils/`):
+- **GameConstants**: Static utility class with game-wide constants (gravity, player defaults, status durations, level mappings)
+- **SignalBus**: Global signal bus for decoupled communication
 
-### Hazard System
+### Hazard Module
 
-**Spike** (`scripts/hazards/spike.gd`):
+**Spikes** (`scripts/hazards/`):
 - Area2D trigger on player collision
 - Uses `PlayerManager.apply_damage()` with `cloth_damage: 1`, `knockback_force: 1500`
 
-**Sticky Pool** (`scripts/hazards/sticky_pool.gd`):
+**Sticky Pools** (`scripts/hazards/`):
 - Applies damage + knockback via `PlayerManager.apply_damage()`
 - Applies status via `PlayerManager.apply_status("sticky")`
 
@@ -187,4 +154,8 @@ Configured in `project.godot`:
 The `docs/` folder contains project documentation:
 
 - **`analysis_20260214.md`**: Comprehensive code architecture analysis and Manager singleton refactoring proposal. Documents current system coupling issues and provides a phased refactoring plan
-- **`mainmenu_design.md`**: Main menu UI design document outlining the menu tree structure (Start Game, Gallery, Settings, Exit), save slot selection flow, and settings options
+- **`ui_images/`**: UI design reference images
+
+### UI Scenes
+
+The `scenes/UI/` folder contains UI scene files (scaffold state - no art assets or functionality implemented yet).

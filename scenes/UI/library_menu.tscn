@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://wnyynjlaghi7"]
+
+[ext_resource type="Texture2D" uid="uid://dcrlqp0ru1k4c" path="res://docs/ui/library_menu.png" id="1_0nee5"]
+
+[node name="LibraryMenu" type="Control" unique_id=1581842100]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1574061600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0nee5")
+expand_mode = 2
+
+[node name="ReturnButton" type="Button" parent="." unique_id=212874374]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.055000003
+anchor_right = 0.091000006
+anchor_bottom = 0.148
+text = "返回"
+
+[node name="Selection" type="Control" parent="." unique_id=718463347]
+layout_mode = 1
+anchor_left = 0.030000001
+anchor_top = 0.187
+anchor_right = 0.23200001
+anchor_bottom = 0.90900004
+
+[node name="SpriteViewer" type="Control" parent="." unique_id=883518053]
+layout_mode = 1
+anchor_left = 0.25300002
+anchor_top = 0.105000004
+anchor_right = 0.632
+anchor_bottom = 0.92200005
+
+[node name="Information" type="Control" parent="." unique_id=108640863]
+layout_mode = 1
+anchor_left = 0.647
+anchor_top = 0.094000004
+anchor_right = 0.95100003
+anchor_bottom = 0.924

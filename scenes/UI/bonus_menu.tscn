@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://bx6uivl12o50f"]
+
+[ext_resource type="Texture2D" uid="uid://c5xxq6l8wj86g" path="res://docs/ui/extra_menu.png" id="1_4piav"]
+
+[node name="BonusMenu" type="Control" unique_id=2143255264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1286771541]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4piav")
+expand_mode = 2
+
+[node name="ReturnButton" type="Button" parent="." unique_id=1674469442]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.059000004
+anchor_right = 0.09
+anchor_bottom = 0.15100001
+grow_horizontal = 2
+grow_vertical = 2
+text = "返回
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=961922300]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.126
+anchor_right = 0.906
+anchor_bottom = 0.9110001
+
+[node name="ExtraLevelA" type="Control" parent="HBoxContainer" unique_id=189858914]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.26
+
+[node name="LevelImage" type="TextureRect" parent="HBoxContainer/ExtraLevelA" unique_id=533939223]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.85700005
+
+[node name="ChooseLevelA" type="Button" parent="HBoxContainer/ExtraLevelA/LevelImage" unique_id=1965077705]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelName" type="Label" parent="HBoxContainer/ExtraLevelA" unique_id=679649921]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.8880001
+anchor_right = 0.72800004
+anchor_bottom = 1.0
+text = "隐藏关A名字"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelRequirement" type="Label" parent="HBoxContainer/ExtraLevelA" unique_id=1605337188]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.54
+anchor_right = 0.87
+anchor_bottom = 0.79
+text = "隐藏关A条件：
+1. 。。。。
+2. 。。。。
+3. 。。。。"
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=302968803]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ExtraLevelB" type="Control" parent="HBoxContainer" unique_id=211789172]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.26
+
+[node name="LevelImage" type="TextureRect" parent="HBoxContainer/ExtraLevelB" unique_id=1734685652]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.85700005
+
+[node name="ChooseLevelB" type="Button" parent="HBoxContainer/ExtraLevelB/LevelImage" unique_id=1716797407]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelName" type="Label" parent="HBoxContainer/ExtraLevelB" unique_id=1383245312]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.223
+anchor_top = 0.8880001
+anchor_right = 0.72800004
+anchor_bottom = 1.0
+text = "隐藏关A名字"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelRequirement" type="Label" parent="HBoxContainer/ExtraLevelB" unique_id=1312898079]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.54
+anchor_right = 0.87
+anchor_bottom = 0.79
+text = "隐藏关B条件：
+1. 。。。。
+2. 。。。。
+3. 。。。。"

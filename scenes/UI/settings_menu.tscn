@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://dv4bhlfd3e0xv"]
+
+[node name="SettingsMenu" type="Control" unique_id=1695912111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=961392259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1894392260]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel" unique_id=1780643032]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer" unique_id=1991416034]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CloseButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/TopBar" unique_id=1540406017]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "X"
+
+[node name="BackLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/TopBar" unique_id=1176904511]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "返回主菜单"
+
+[node name="Spacer" type="Control" parent="CenterContainer/Panel/VBoxContainer/TopBar" unique_id=1092022460]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SettingsArea" type="VBoxContainer" parent="CenterContainer/Panel/VBoxContainer" unique_id=1148582898]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="LanguageRow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea" unique_id=500745161]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="LanguageLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow" unique_id=92342830]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Language:"
+
+[node name="LanguageButtons" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow" unique_id=301920943]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ENButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow/LanguageButtons" unique_id=1525630388]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+text = "EN"
+
+[node name="JPButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow/LanguageButtons" unique_id=1785546621]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+text = "JP"
+
+[node name="CHSButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow/LanguageButtons" unique_id=1281297443]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+text = "CHS"
+
+[node name="CHTButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/LanguageRow/LanguageButtons" unique_id=1618915762]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+text = "CHT"
+
+[node name="FullscreenRow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea" unique_id=796111266]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="FullscreenLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/FullscreenRow" unique_id=1752276976]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Full Screen:"
+
+[node name="FullscreenCheck" type="CheckBox" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/FullscreenRow" unique_id=1604589003]
+layout_mode = 2
+
+[node name="ScreenSizeRow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea" unique_id=1022602283]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ScreenSizeLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/ScreenSizeRow" unique_id=927156583]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Screen Size:"
+
+[node name="ScreenSizeButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/ScreenSizeRow" unique_id=1922926247]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+text = "点一次切一次"
+
+[node name="BGMRow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea" unique_id=2041257217]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="BGMLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/BGMRow" unique_id=1450752066]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "BGM Volume:"
+
+[node name="BGMSlider" type="HSlider" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/BGMRow" unique_id=642011436]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="BGMValue" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/BGMRow" unique_id=2076938591]
+layout_mode = 2
+text = "滑条"
+
+[node name="SERow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/SettingsArea" unique_id=787164377]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="SELabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/SERow" unique_id=1712135103]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "SE Volume:"
+
+[node name="SESlider" type="HSlider" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/SERow" unique_id=897741651]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SEValue" type="Label" parent="CenterContainer/Panel/VBoxContainer/SettingsArea/SERow" unique_id=1380853381]
+layout_mode = 2
+text = "滑条"
+
+[node name="BottomArea" type="VBoxContainer" parent="CenterContainer/Panel/VBoxContainer" unique_id=1409832684]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="InputButtonsRow" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer/BottomArea" unique_id=584098466]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 40
+
+[node name="KeyboardButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow" unique_id=7355669]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+
+[node name="KeyboardIcon" type="Label" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow/KeyboardButton" unique_id=1923118241]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "⌨"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyboardLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow/KeyboardButton" unique_id=1241932255]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Keyboard"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ControllerButton" type="Button" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow" unique_id=1253407285]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+
+[node name="ControllerIcon" type="Label" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow/ControllerButton" unique_id=1946649475]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "🎮"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControllerLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/BottomArea/InputButtonsRow/ControllerButton" unique_id=1515563692]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Controller"
+horizontal_alignment = 1
+vertical_alignment = 2

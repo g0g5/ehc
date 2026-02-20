@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://b5x3ytl6r8d0y"]
+
+[node name="MainMenu" type="Control" unique_id=1462737454]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=501517666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="HBoxContainer" unique_id=995918601]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="TitleArea" type="Control" parent="HBoxContainer/LeftPanel" unique_id=753114772]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="CharacterIllustration" type="Control" parent="HBoxContainer/LeftPanel" unique_id=839830788]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlaceholderLabel" type="Label" parent="HBoxContainer/LeftPanel/CharacterIllustration" unique_id=1388965847]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "正式版在左方放角色的插图"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightPanel" type="VBoxContainer" parent="HBoxContainer" unique_id=347443469]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="LogoArea" type="Control" parent="HBoxContainer/RightPanel" unique_id=1824506492]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="LogoLabel" type="Label" parent="HBoxContainer/RightPanel/LogoArea" unique_id=576091378]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "LEWD DELIVERY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="HBoxContainer/RightPanel" unique_id=2038823112]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MenuContainer" type="HBoxContainer" parent="HBoxContainer/RightPanel" unique_id=1908487982]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="HBoxContainer/RightPanel/MenuContainer" unique_id=911423403]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="Button" parent="HBoxContainer/RightPanel/MenuContainer/MenuButtons" unique_id=977239061]
+custom_minimum_size = Vector2(180, 45)
+layout_mode = 2
+text = "开始"
+
+[node name="GalleryButton" type="Button" parent="HBoxContainer/RightPanel/MenuContainer/MenuButtons" unique_id=430290903]
+custom_minimum_size = Vector2(180, 45)
+layout_mode = 2
+text = "画廊"
+
+[node name="SettingsButton" type="Button" parent="HBoxContainer/RightPanel/MenuContainer/MenuButtons" unique_id=317050143]
+custom_minimum_size = Vector2(180, 45)
+layout_mode = 2
+text = "设置"
+
+[node name="ExitButton" type="Button" parent="HBoxContainer/RightPanel/MenuContainer/MenuButtons" unique_id=648973941]
+custom_minimum_size = Vector2(180, 45)
+layout_mode = 2
+text = "退出"
+
+[node name="BottomSpacer" type="Control" parent="HBoxContainer/RightPanel" unique_id=966434910]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0

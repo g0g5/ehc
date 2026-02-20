@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://b7di33frfotuk"]
+
+[ext_resource type="Texture2D" uid="uid://c53wxbm14bc30" path="res://docs/ui/gallery_scenes_menu.png" id="1_k4oyo"]
+
+[node name="GalleryScenesMenu" type="Control" unique_id=2085891782]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=906382369]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k4oyo")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=80576349]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.062000003
+anchor_right = 0.09200001
+anchor_bottom = 0.155
+text = "返回
+"
+
+[node name="Label" type="Label" parent="." unique_id=1031913355]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25100002
+anchor_top = 0.09
+anchor_right = 0.76100004
+anchor_bottom = 0.215
+text = "请选择一个舞台/场景名"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1113826271]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.171
+anchor_top = 0.305
+anchor_right = 0.841
+anchor_bottom = 0.88000005
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1159130323]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Scene1" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=2100072633]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Scene1" unique_id=1944295716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator1" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1623200544]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1346854685]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Scene2" unique_id=482351812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator2" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=884771775]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene3" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=2019304364]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Scene3" unique_id=1480264438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator3" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=265988466]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene4" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=836665946]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/Scene4" unique_id=620271974]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=343383278]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1220142205]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Scene1" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=1484811397]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2/Scene1" unique_id=117958695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator1" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=248937771]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene2" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=123455548]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2/Scene2" unique_id=40976957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator2" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=1399256792]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene3" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=1538555717]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2/Scene3" unique_id=1920334338]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator3" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=1297824342]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scene4" type="Control" parent="VBoxContainer/HBoxContainer2" unique_id=1323009792]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2/Scene4" unique_id=1492243820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

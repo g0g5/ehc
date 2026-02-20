@@ -5,7 +5,9 @@
       "Bash(findstr:*)",
       "Bash(ls:*)",
       "Bash(wc -l:*)",
-      "Bash(grep -h:*)"
+      "Bash(grep -h:*)",
+      "mcp__ddg-search__fetch_content",
+      "Bash(git add:*)"
     ]
   }
 }

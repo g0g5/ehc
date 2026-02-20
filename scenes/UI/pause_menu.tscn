@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b6reyymt22sut"]
+
+[node name="PauseMenu" type="Control" unique_id=78759508]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1282805520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.12, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1018732333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="Control" parent="HBoxContainer" unique_id=972015129]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="GamePreview" type="ColorRect" parent="HBoxContainer/LeftPanel" unique_id=1644767782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RightPanel" type="VBoxContainer" parent="HBoxContainer" unique_id=1710975211]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpacerTop" type="Control" parent="HBoxContainer/RightPanel" unique_id=1722600039]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.33
+
+[node name="Title" type="Label" parent="HBoxContainer/RightPanel" unique_id=153443302]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnResume" type="Button" parent="HBoxContainer/RightPanel" unique_id=361765914]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "返回游戏"
+
+[node name="BtnSettings" type="Button" parent="HBoxContainer/RightPanel" unique_id=2123887144]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "选项菜单"
+
+[node name="BtnShop" type="Button" parent="HBoxContainer/RightPanel" unique_id=668710367]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "回到商店"
+
+[node name="BtnMainMenu" type="Button" parent="HBoxContainer/RightPanel" unique_id=1615893506]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "回到主菜单"
+
+[node name="SpacerBottom" type="Control" parent="HBoxContainer/RightPanel" unique_id=38214364]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.33
