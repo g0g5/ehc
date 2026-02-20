@@ -7,7 +7,8 @@
       "Bash(wc -l:*)",
       "Bash(grep -h:*)",
       "mcp__ddg-search__fetch_content",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
