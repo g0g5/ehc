@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dv4bhlfd3e0xv"]
 
-[node name="SettingsMenu" type="Control" unique_id=1695912111]
+[ext_resource type="Script" uid="uid://cb2ntoxhsjv6q" path="res://scripts/ui/settings_menu.gd" id="1_dvq1v"]
+
+[node name="SettingsMenu" type="Control" unique_id=1695912111 node_paths=PackedStringArray("close_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dvq1v")
+close_button = NodePath("CenterContainer/Panel/VBoxContainer/TopBar/CloseButton")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=961392259]
 layout_mode = 1

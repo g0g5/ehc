@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EHC"
-run/main_scene="uid://chuib5ot07wqn"
+run/main_scene="uid://b5x3ytl6r8d0y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -147,3 +147,9 @@ func is_paused() -> bool:
 # 检查是否游戏结束
 func is_game_over() -> bool:
 	return current_state == GameState.GAME_OVER
+
+
+# 退出游戏
+func quit_game() -> void:
+	print("[GameManager] 退出游戏")
+	get_tree().quit()

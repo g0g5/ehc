@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ba7owq7rwvxii"]
 
-[node name="SavesMenu" type="Control" unique_id=697083886]
+[ext_resource type="Script" uid="uid://jb5cvaedr6k3" path="res://scripts/ui/saves_menu.gd" id="1_eceqc"]
+
+[node name="SavesMenu" type="Control" unique_id=697083886 node_paths=PackedStringArray("close_button", "save_slot_1", "save_slot_2", "save_slot_3")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -13,6 +15,11 @@ offset_right = 400.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eceqc")
+close_button = NodePath("PanelContainer/HBoxContainer/CloseButton")
+save_slot_1 = NodePath("PanelContainer/HBoxContainer/SlotsContainer/Slot1")
+save_slot_2 = NodePath("PanelContainer/HBoxContainer/SlotsContainer/Slot2")
+save_slot_3 = NodePath("PanelContainer/HBoxContainer/SlotsContainer/Slot3")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1555555555]
 layout_mode = 1

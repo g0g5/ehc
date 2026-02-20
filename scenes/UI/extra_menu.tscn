@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://d14ecaamnle3x"]
 
-[ext_resource type="Texture2D" uid="uid://bshwmubb5bjb4" path="res://docs/ui/gallery_selection_menu.png" id="1_yeo14"]
+[ext_resource type="Script" uid="uid://cvl8stn7518x1" path="res://scripts/ui/extra_menu.gd" id="1_wffrx"]
+[ext_resource type="Texture2D" uid="uid://bshwmubb5bjb4" path="res://docs/ui_images/gallery_selection_menu.png" id="1_yeo14"]
 
-[node name="ExtraMenu" type="Control" unique_id=1667435589]
+[node name="ExtraMenu" type="Control" unique_id=1667435589 node_paths=PackedStringArray("back_button", "gallery_button", "library_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wffrx")
+back_button = NodePath("BackButton")
+gallery_button = NodePath("GalleryPanel/Button")
+library_button = NodePath("LibraryPanel/Button")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=68397746]
 layout_mode = 1

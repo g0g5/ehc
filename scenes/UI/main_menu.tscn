@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://b5x3ytl6r8d0y"]
 
-[node name="MainMenu" type="Control" unique_id=1462737454]
+[ext_resource type="Script" uid="uid://dqn10dp27meqb" path="res://scripts/ui/main_menu.gd" id="1_qwnig"]
+
+[node name="MainMenu" type="Control" unique_id=1462737454 node_paths=PackedStringArray("start_button", "gallery_button", "settings_button", "quit_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qwnig")
+start_button = NodePath("HBoxContainer/RightPanel/MenuContainer/MenuButtons/StartButton")
+gallery_button = NodePath("HBoxContainer/RightPanel/MenuContainer/MenuButtons/GalleryButton")
+settings_button = NodePath("HBoxContainer/RightPanel/MenuContainer/MenuButtons/SettingsButton")
+quit_button = NodePath("HBoxContainer/RightPanel/MenuContainer/MenuButtons/ExitButton")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=501517666]
 layout_mode = 1
